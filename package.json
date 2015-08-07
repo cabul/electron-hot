@@ -1,0 +1,25 @@
+{
+  "name": "electron-hot",
+  "version": "0.1.0",
+  "description": "Electron hot loader",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cabul/electron-hot.git"
+  },
+  "keywords": [
+    "electron",
+    "hot",
+    "loader"
+  ],
+  "author": "Calvin Bulla <calvin.bulla@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cabul/electron-hot/issues"
+  },
+  "homepage": "https://github.com/cabul/electron-hot#readme",
+  "private": true
+}
