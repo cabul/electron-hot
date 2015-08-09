@@ -4,7 +4,6 @@
   "description": "Electron hot loader",
   "main": "lib/index.js",
   "scripts": {
-    "build": "webpack --config example/webpack.config.js",
     "example": "electron example"
   },
   "repository": {

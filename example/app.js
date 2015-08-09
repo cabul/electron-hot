@@ -1,4 +1,3 @@
-var physics = require('./physics.js');
 var canvas = document.createElement('canvas');
 canvas.style.position = 'absolute';
 canvas.style.top = '0';
@@ -37,9 +36,22 @@ function render(now) {
 
   ctx.fillText(seconds.toFixed(1) + 's', canvas.width / 2, 32);
 
-  physics.step(balls, canvas);
+  var gravity = [0, 1];
 
   balls.forEach(function(ball) {
+    ball.position[0] += ball.velocity[0];
+    ball.position[1] += ball.velocity[1];
+
+    ball.velocity[0] += gravity[0];
+    ball.velocity[1] += gravity[1];
+
+    if (ball.position[1] + ball.radius > canvas.height) {
+      ball.position[1] = canvas.height - ball.radius;
+      ball.velocity[1] *= -ball.elasticity;
+      if (Math.abs(ball.velocity[1]) < gravity[1]*2) {
+        ball.velocity[1] = 0;
+      }
+    }
     ctx.beginPath();
     ctx.arc(ball.position[0], ball.position[1], ball.radius, 0, 2 * Math.PI, false);
     ctx.fillStyle = '#ffffff';
