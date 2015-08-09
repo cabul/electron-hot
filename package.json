@@ -4,7 +4,8 @@
   "description": "Electron hot loader",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --config example/webpack.config.js",
+    "example": "electron example"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,13 @@
     "url": "https://github.com/cabul/electron-hot/issues"
   },
   "homepage": "https://github.com/cabul/electron-hot#readme",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "chokidar": "^1.0.5",
+    "chrome-remote-interface": "^0.9.0"
+  },
+  "devDependencies": {
+    "electron-prebuilt": "^0.30.2",
+    "webpack": "^1.11.0"
+  }
 }

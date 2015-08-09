@@ -1,0 +1,8 @@
+{
+  "name": "electron-hot",
+  "version": "0.1.0",
+  "description": "Hot loader for Electron",
+  "main": "index.js",
+  "author": "Calvin Bulla <calvin.bulla@gmail.com>",
+  "license": "MIT"
+}
