@@ -21,7 +21,6 @@
     "url": "https://github.com/cabul/electron-hot/issues"
   },
   "homepage": "https://github.com/cabul/electron-hot#readme",
-  "private": true,
   "dependencies": {
     "chokidar": "^1.0.5",
     "chrome-remote-interface": "^0.9.0"
